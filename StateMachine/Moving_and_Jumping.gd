@@ -6,7 +6,6 @@ var soundjump = null
 
 func _ready():
 	yield(player, "ready")
-	soundjump = get_node_or_null("/root/Game/Sounds/SoundJump"); 
 
 func physics_process(_delta):
 	if not player.is_on_floor():
