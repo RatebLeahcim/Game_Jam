@@ -1,6 +1,5 @@
-# 2D-Platformer-Character
-
-A somewhat-generic character (including animations and state machine) appropriate for a 2D platformer built in Godot. Includes test level.
+# C220-Final-Project
+This is Michael Betar, Edison Li, and Kathryn Steele's Final Project "Game Jam" for their C220 Game Technology class.
 
 ## Implementation
 Built using Godot 3.2.3
@@ -17,4 +16,4 @@ None
 None
 
 ## Created by 
-Edison Li
+Michael Betar, Edison Li, and Kathryn Steele
