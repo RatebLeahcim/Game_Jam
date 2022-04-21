@@ -5,8 +5,8 @@
 [ext_resource path="res://Assets/Exit.png" type="Texture" id=3]
 [ext_resource path="res://Assets/sound/Between_Levels.mp3" type="AudioStream" id=4]
 [ext_resource path="res://Menu.gd" type="Script" id=5]
+[ext_resource path="res://StateMachine/Player_Container3.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Tiles/Tiles.png" type="Texture" id=7]
-[ext_resource path="res://StateMachine/Player_Container.gd" type="Script" id=8]
 [ext_resource path="res://Assets/Tiles/Platform_tile.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Tiles/Bonsai.png" type="Texture" id=10]
 [ext_resource path="res://Levels/Exit.gd" type="Script" id=11]
@@ -312,7 +312,7 @@ format = 1
 
 [node name="Player_Container3" type="Node2D" parent="."]
 position = Vector2( -1825, -932 )
-script = ExtResource( 8 )
+script = ExtResource( 6 )
 
 [node name="Camera" type="Camera2D" parent="Player_Container3"]
 current = true
@@ -387,9 +387,6 @@ script = ExtResource( 11 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Exit5"]
 frames = SubResource( 16 )
 animation = "exit"
-
-frame = 1
-
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit5"]
