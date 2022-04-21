@@ -581,6 +581,7 @@ tile_set = SubResource( 18 )
 collision_layer = 3
 collision_mask = 3
 format = 1
+tile_data = PoolIntArray( -917515, 0, 0, 65514, 0, 0, 1048589, 0, 0 )
 
 [node name="Player_Container1" type="Node2D" parent="."]
 script = ExtResource( 8 )
@@ -669,6 +670,7 @@ script = ExtResource( 12 )
 position = Vector2( 4, -15 )
 frames = SubResource( 16 )
 animation = "exit"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit2"]

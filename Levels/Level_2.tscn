@@ -309,16 +309,6 @@ tile_data = PoolIntArray( -1245214, 0, 0, -1245213, 0, 0, -1245212, 0, 0, -12452
 
 [node name="Spikes" type="Node2D" parent="."]
 
-[node name="Spike2" type="Area2D" parent="Spikes"]
-position = Vector2( -1150, -863 )
-script = ExtResource( 13 )
-
-[node name="Spike" type="Sprite" parent="Spikes/Spike2"]
-texture = ExtResource( 4 )
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Spikes/Spike2"]
-polygon = PoolVector2Array( -71, 30, -47, -3, -43, 2, -24, 31, -4, 0, -2, -3, 6, 8, 23, 31, 44, -2, 46, -1, 72, 30, 96, 0, 99, 1, 113, 18, 125, 31, 128, 32, -128, 32, -124, 27, -99, -4, -96, -1, -85, 13 )
-
 [node name="Spike" type="Area2D" parent="Spikes"]
 position = Vector2( -1150, -863 )
 script = ExtResource( 13 )
@@ -335,7 +325,6 @@ script = ExtResource( 13 )
 
 [node name="Spike" type="Sprite" parent="Spikes/Spike3"]
 texture = ExtResource( 4 )
-script = ExtResource( 13 )
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Spikes/Spike3"]
 position = Vector2( 0, 3 )
@@ -811,6 +800,7 @@ tile_set = SubResource( 18 )
 collision_layer = 3
 collision_mask = 3
 format = 1
+tile_data = PoolIntArray( -786445, 1, 0, 1572836, 1, 0 )
 
 [node name="Player_Container2" type="Node2D" parent="."]
 script = ExtResource( 8 )
@@ -888,7 +878,7 @@ script = ExtResource( 12 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Exit3"]
 frames = SubResource( 16 )
 animation = "exit"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit3"]
@@ -900,7 +890,55 @@ stream = ExtResource( 11 )
 autoplay = true
 max_distance = 20000.0
 
-[connection signal="body_entered" from="Spikes/Spike2" to="Spikes/Spike2" method="_on_Spike2_body_entered"]
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Hud" type="Control" parent="CanvasLayer2"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Control" parent="CanvasLayer2"]
+visible = false
+margin_left = 2.0
+margin_top = 376.0
+margin_right = 42.0
+margin_bottom = 416.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2/Menu"]
+margin_top = -368.0
+margin_right = 1024.0
+margin_bottom = 232.0
+color = Color( 0, 0, 0, 0.501961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Retry" type="Button" parent="CanvasLayer2/Menu"]
+margin_left = 412.0
+margin_top = -94.0
+margin_right = 612.0
+margin_bottom = -54.0
+text = "Retry"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="CanvasLayer2/Menu"]
+margin_left = 412.0
+margin_top = 74.0
+margin_right = 612.0
+margin_bottom = 114.0
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="body_entered" from="Spikes/Spike" to="Spikes/Spike" method="_on_Spike_body_entered"]
 [connection signal="body_entered" from="Spikes/Spike3" to="Spikes/Spike3" method="_on_Spike_body_entered"]
 [connection signal="body_entered" from="Spikes/Spike4" to="Spikes/Spike4" method="_on_Spike_body_entered"]
@@ -945,3 +983,5 @@ max_distance = 20000.0
 [connection signal="pressed" from="CanvasLayer/Menu/Retry" to="CanvasLayer/Menu" method="_on_Retry_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menu/Quit" to="CanvasLayer/Menu" method="_on_Quit_pressed"]
 [connection signal="body_entered" from="Exit3" to="Exit3" method="_on_Exit3_body_entered"]
+[connection signal="pressed" from="CanvasLayer2/Menu/Retry" to="CanvasLayer2/Menu" method="_on_Retry_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Menu/Quit" to="CanvasLayer2/Menu" method="_on_Quit_pressed"]

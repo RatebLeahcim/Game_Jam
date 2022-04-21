@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/Exit.png" type="Texture" id=3]
 [ext_resource path="res://Assets/sound/Between_Levels.mp3" type="AudioStream" id=4]
 [ext_resource path="res://Menu.gd" type="Script" id=5]
-[ext_resource path="res://StateMachine/Player_Container3.gd" type="Script" id=6]
+[ext_resource path="res://StateMachine/Player_Container4.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Tiles/Tiles.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Tiles/Platform_tile.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Tiles/Bonsai.png" type="Texture" id=10]
@@ -310,11 +310,11 @@ collision_layer = 3
 collision_mask = 3
 format = 1
 
-[node name="Player_Container3" type="Node2D" parent="."]
+[node name="Player_Container4" type="Node2D" parent="."]
 position = Vector2( -1692, -964 )
 script = ExtResource( 6 )
 
-[node name="Camera" type="Camera2D" parent="Player_Container3"]
+[node name="Camera" type="Camera2D" parent="Player_Container4"]
 current = true
 limit_left = 0
 limit_top = -10000001
@@ -387,7 +387,6 @@ script = ExtResource( 11 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Exit5"]
 frames = SubResource( 16 )
 animation = "exit"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit5"]
@@ -398,6 +397,57 @@ stream = ExtResource( 4 )
 autoplay = true
 max_distance = 20000.0
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Hud" type="Control" parent="CanvasLayer2"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Control" parent="CanvasLayer2"]
+visible = false
+margin_left = 2.0
+margin_top = 376.0
+margin_right = 42.0
+margin_bottom = 416.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2/Menu"]
+margin_top = -368.0
+margin_right = 1024.0
+margin_bottom = 232.0
+color = Color( 0, 0, 0, 0.501961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Retry" type="Button" parent="CanvasLayer2/Menu"]
+margin_left = 412.0
+margin_top = -94.0
+margin_right = 612.0
+margin_bottom = -54.0
+text = "Retry"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="CanvasLayer2/Menu"]
+margin_left = 412.0
+margin_top = 74.0
+margin_right = 612.0
+margin_bottom = 114.0
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="CanvasLayer/Menu/Retry" to="CanvasLayer/Menu" method="_on_Retry_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menu/Quit" to="CanvasLayer/Menu" method="_on_Quit_pressed"]
 [connection signal="body_entered" from="Exit5" to="Exit5" method="_on_Exit5_body_entered"]
+[connection signal="pressed" from="CanvasLayer2/Menu/Retry" to="CanvasLayer2/Menu" method="_on_Retry_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Menu/Quit" to="CanvasLayer2/Menu" method="_on_Quit_pressed"]
