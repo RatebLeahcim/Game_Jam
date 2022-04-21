@@ -403,7 +403,10 @@ script = ExtResource( 12 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Exit3"]
 frames = SubResource( 16 )
 animation = "exit"
+<<<<<<< Updated upstream
 frame = 2
+=======
+>>>>>>> Stashed changes
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit3"]
