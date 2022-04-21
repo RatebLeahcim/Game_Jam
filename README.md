@@ -2,7 +2,7 @@
 This is Michael Betar, Edison Li, and Kathryn Steele's Final Project "Game Jam" for their C220 Game Technology class.
 
 ## Theme
-We interpreted the Theme "Time Crunch" to represent the issues Game industry regarding companies making their developers rush to make games on timelines. The overwork of Devs in the industry is a major issue that is being recongized internationally in light of the recent controversies in companies like Blizzard and Nintendo. Our game follows a Game Dev rushing to create the rest of their project after being late for work, however their overwork is slowly getting to them as the game progressively gets harder with abilities being taken away from the Player and the music becoming more disjointed and "broken." The Ending is a dark one sheds light on the outcomes of "Time Crunching" work.  
+We interpreted the Theme "Time Crunch" to represent the issues Game industry regarding companies making their developers rush to make games on timelines. The overwork of Devs in the industry is a major issue that is being recongized internationally in light of the recent controversies in companies like Blizzard and Nintendo. Our game follows a Game Dev rushing to create the rest of their project after being late for work, however their overwork is slowly getting to them as the game progressively gets harder with abilities being taken away from the Player and the music becoming more disjointed and "broken." The Ending is a dark one which sheds light on the outcomes of "Time Crunching" work.  
 
 ## Game Play
 Finish your Game by the Deadline (Timer) by surviving three different platforming maps. Avoid enemies and spike traps!
