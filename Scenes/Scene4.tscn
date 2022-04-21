@@ -1,10 +1,9 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Assets/Players/Death.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Thruster-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Assets/sound/Between_Levels.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Scenes/Button4.gd" type="Script" id=4]
-[ext_resource path="res://Levels/Exit.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Tiles/Bonsai.png" type="Texture" id=6]
 [ext_resource path="res://icon.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Exit.png" type="Texture" id=8]
@@ -291,9 +290,6 @@ animations = [ {
 "speed": 16.0
 } ]
 
-[sub_resource type="CircleShape2D" id=27]
-radius = 100.0
-
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
 atlas = ExtResource( 1 )
@@ -317,7 +313,7 @@ region = Rect2( 64, 64, 64, 64 )
 [sub_resource type="SpriteFrames" id=32]
 animations = [ {
 "frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ) ],
-"loop": true,
+"loop": false,
 "name": "death",
 "speed": 2.0
 } ]
@@ -368,25 +364,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Exit5" type="Area2D" parent="."]
+[node name="ClockOut" type="AnimatedSprite" parent="."]
 position = Vector2( 760, 306 )
 scale = Vector2( 2, 2 )
-script = ExtResource( 5 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Exit5"]
 frames = SubResource( 26 )
 animation = "exit"
-frame = 2
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit5"]
-shape = SubResource( 27 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="Player" type="AnimatedSprite" parent="."]
 position = Vector2( 370, 299 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 32 )
 animation = "death"
+frame = 3
+playing = true
 
 [connection signal="pressed" from="Button/Next" to="Button" method="_on_Next_pressed"]
-[connection signal="body_entered" from="Exit5" to="Exit5" method="_on_Exit5_body_entered"]
