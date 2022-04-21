@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Assets/Players/Jump.png" type="Texture" id=1]
 [ext_resource path="res://StateMachine/Player1/Jumping.gd" type="Script" id=2]
@@ -11,7 +11,6 @@
 [ext_resource path="res://Player/Player.gd" type="Script" id=9]
 [ext_resource path="res://StateMachine/Player1/WallJump.gd" type="Script" id=10]
 [ext_resource path="res://Assets/Players/Character.png" type="Texture" id=11]
-[ext_resource path="res://Assets/sound/simple_jump.mp3" type="AudioStream" id=12]
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 4
@@ -191,15 +190,8 @@ script = ExtResource( 3 )
 [node name="Jumping" type="Node" parent="StateMachine"]
 script = ExtResource( 2 )
 
-[node name="Jump" type="AudioStreamPlayer2D" parent="StateMachine/Jumping"]
-stream = ExtResource( 12 )
-
 [node name="Moving_and_Jumping" type="Node" parent="StateMachine"]
 script = ExtResource( 8 )
-
-[node name="Jump" type="AudioStreamPlayer2D" parent="StateMachine/Moving_and_Jumping"]
-stream = ExtResource( 12 )
-max_distance = 20000.0
 
 [node name="Falling" type="Node" parent="StateMachine"]
 script = ExtResource( 7 )
