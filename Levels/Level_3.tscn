@@ -325,7 +325,6 @@ radius = 30.0
 
 [node name="Background" type="TileMap" parent="."]
 tile_set = SubResource( 3 )
-show_collision = true
 collision_layer = 3
 collision_mask = 3
 format = 1
@@ -333,7 +332,6 @@ tile_data = PoolIntArray( -1245214, 0, 0, -1245213, 0, 0, -1245212, 0, 0, -12452
 
 [node name="Tiles" type="TileMap" parent="."]
 tile_set = SubResource( 11 )
-show_collision = true
 collision_layer = 3
 collision_mask = 3
 format = 1
@@ -712,20 +710,21 @@ stream = ExtResource( 11 )
 autoplay = true
 max_distance = 20000.0
 
-[node name="Exit2" type="Area2D" parent="."]
-position = Vector2( -332, 2515 )
+[node name="Exit4" type="Area2D" parent="."]
+position = Vector2( -1487, -970 )
 script = ExtResource( 12 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Exit2"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Exit4"]
 position = Vector2( 4, -15 )
 frames = SubResource( 16 )
 animation = "exit"
+frame = 2
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit4"]
 position = Vector2( 0, -4 )
 shape = SubResource( 17 )
 
 [connection signal="pressed" from="CanvasLayer/Menu/Retry" to="CanvasLayer/Menu" method="_on_Retry_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menu/Quit" to="CanvasLayer/Menu" method="_on_Quit_pressed"]
-[connection signal="body_entered" from="Exit2" to="Exit2" method="_on_Exit2_body_entered"]
+[connection signal="body_entered" from="Exit4" to="Exit4" method="_on_Exit4_body_entered"]
