@@ -32,5 +32,4 @@ func move_to (current, to, step):
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":
-		$DeathSound.play()
 		body.die()

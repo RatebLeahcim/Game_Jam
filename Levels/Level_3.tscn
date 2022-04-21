@@ -1,9 +1,8 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Tiles/Background.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Exit.png" type="Texture" id=3]
-[ext_resource path="res://Menu.gd" type="Script" id=5]
 [ext_resource path="res://Camera.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Tiles/Tiles.png" type="Texture" id=7]
 [ext_resource path="res://StateMachine/Player_Container3.gd" type="Script" id=8]
@@ -597,7 +596,7 @@ moveDist = 30
 
 [node name="Slime45" parent="Enemy_conatiner" instance=ExtResource( 14 )]
 position = Vector2( -716, -791 )
-moveDist = 500
+moveDist = 1000
 
 [node name="Slime46" parent="Enemy_conatiner" instance=ExtResource( 14 )]
 position = Vector2( 10, -298 )
@@ -653,57 +652,36 @@ position = Vector2( -124, -551 )
 moveDist = 0
 
 [node name="Slime72" parent="Enemy_conatiner" instance=ExtResource( 14 )]
-position = Vector2( 474, -1000 )
-moveDist = 0
+position = Vector2( -1072, -961 )
+speed = 200
+moveDist = 5000
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Slime75" parent="Enemy_conatiner" instance=ExtResource( 14 )]
+position = Vector2( -280, 407 )
+moveDist = 300
 
-[node name="Hud" type="Control" parent="CanvasLayer"]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Slime77" parent="Enemy_conatiner" instance=ExtResource( 14 )]
+position = Vector2( -434, 249 )
+moveDist = 300
 
-[node name="Menu" type="Control" parent="CanvasLayer"]
-visible = false
-margin_left = 2.0
-margin_top = 376.0
-margin_right = 42.0
-margin_bottom = 416.0
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Slime80" parent="Enemy_conatiner" instance=ExtResource( 14 )]
+position = Vector2( -604, 90 )
+moveDist = 300
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Menu"]
-margin_top = -368.0
-margin_right = 1024.0
-margin_bottom = 232.0
-color = Color( 0, 0, 0, 0.501961 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Slime76" parent="Enemy_conatiner" instance=ExtResource( 14 )]
+position = Vector2( 0, 1122 )
+speed = 200
+moveDist = 2000
 
-[node name="Retry" type="Button" parent="CanvasLayer/Menu"]
-margin_left = 412.0
-margin_top = -94.0
-margin_right = 612.0
-margin_bottom = -54.0
-text = "Retry"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Slime78" parent="Enemy_conatiner" instance=ExtResource( 14 )]
+position = Vector2( 1448, 1199 )
+speed = 10
+moveDist = 300
 
-[node name="Quit" type="Button" parent="CanvasLayer/Menu"]
-margin_left = 412.0
-margin_top = 74.0
-margin_right = 612.0
-margin_bottom = 114.0
-text = "Quit"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Slime79" parent="Enemy_conatiner" instance=ExtResource( 14 )]
+position = Vector2( 1450, 1512 )
+speed = 20
+moveDist = 300
 
 [node name="Sound2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 11 )
@@ -711,7 +689,8 @@ autoplay = true
 max_distance = 20000.0
 
 [node name="Exit4" type="Area2D" parent="."]
-position = Vector2( -1487, -970 )
+position = Vector2( -318, 2491 )
+scale = Vector2( 2, 2 )
 script = ExtResource( 12 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Exit4"]
@@ -725,6 +704,4 @@ playing = true
 position = Vector2( 0, -4 )
 shape = SubResource( 17 )
 
-[connection signal="pressed" from="CanvasLayer/Menu/Retry" to="CanvasLayer/Menu" method="_on_Retry_pressed"]
-[connection signal="pressed" from="CanvasLayer/Menu/Quit" to="CanvasLayer/Menu" method="_on_Quit_pressed"]
 [connection signal="body_entered" from="Exit4" to="Exit4" method="_on_Exit4_body_entered"]
