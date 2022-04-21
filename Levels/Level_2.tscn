@@ -609,6 +609,72 @@ texture = ExtResource( 4 )
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Spikes/Spike28"]
 polygon = PoolVector2Array( -71, 30, -47, -3, -43, 2, -24, 31, -4, 0, -2, -3, 6, 8, 23, 31, 44, -2, 46, -1, 72, 30, 96, 0, 99, 1, 113, 18, 125, 31, 128, 32, -128, 32, -124, 27, -99, -4, -96, -1, -85, 13 )
 
+[node name="Spike30" type="Area2D" parent="Spikes"]
+position = Vector2( -1519, 1501 )
+script = ExtResource( 13 )
+
+[node name="Spike" type="Sprite" parent="Spikes/Spike30"]
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Spikes/Spike30"]
+position = Vector2( 0, 3 )
+polygon = PoolVector2Array( -72, 27, -47, -6, -46, -6, -24, 27, -2, -7, 0, -5, 1, -4, 23, 27, 44, -5, 46, -5, 72, 27, 96, -3, 97, -3, 100, -1, 125, 28, 128, 32, -128, 31, -128, 28, -99, -7, -98, -8, -98, -7 )
+
+[node name="Spike32" type="Area2D" parent="Spikes"]
+position = Vector2( -1003, 1504 )
+script = ExtResource( 13 )
+
+[node name="Spike" type="Sprite" parent="Spikes/Spike32"]
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Spikes/Spike32"]
+position = Vector2( 0, 3 )
+polygon = PoolVector2Array( -72, 27, -47, -6, -46, -6, -24, 27, -2, -7, 0, -5, 1, -4, 23, 27, 44, -5, 46, -5, 72, 27, 96, -3, 97, -3, 100, -1, 125, 28, 128, 32, -128, 31, -128, 28, -99, -7, -98, -8, -98, -7 )
+
+[node name="Spike34" type="Area2D" parent="Spikes"]
+position = Vector2( -484, 1503 )
+script = ExtResource( 13 )
+
+[node name="Spike" type="Sprite" parent="Spikes/Spike34"]
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Spikes/Spike34"]
+position = Vector2( 0, 3 )
+polygon = PoolVector2Array( -72, 27, -47, -6, -46, -6, -24, 27, -2, -7, 0, -5, 1, -4, 23, 27, 44, -5, 46, -5, 72, 27, 96, -3, 97, -3, 100, -1, 125, 28, 128, 32, -128, 31, -128, 28, -99, -7, -98, -8, -98, -7 )
+
+[node name="Spike36" type="Area2D" parent="Spikes"]
+position = Vector2( -29, 1501 )
+script = ExtResource( 13 )
+
+[node name="Spike" type="Sprite" parent="Spikes/Spike36"]
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Spikes/Spike36"]
+position = Vector2( 0, 3 )
+polygon = PoolVector2Array( -72, 27, -47, -6, -46, -6, -24, 27, -2, -7, 0, -5, 1, -4, 23, 27, 44, -5, 46, -5, 72, 27, 96, -3, 97, -3, 100, -1, 125, 28, 128, 32, -128, 31, -128, 28, -99, -7, -98, -8, -98, -7 )
+
+[node name="Spike38" type="Area2D" parent="Spikes"]
+position = Vector2( 487, 1504 )
+script = ExtResource( 13 )
+
+[node name="Spike" type="Sprite" parent="Spikes/Spike38"]
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Spikes/Spike38"]
+position = Vector2( 0, 3 )
+polygon = PoolVector2Array( -72, 27, -47, -6, -46, -6, -24, 27, -2, -7, 0, -5, 1, -4, 23, 27, 44, -5, 46, -5, 72, 27, 96, -3, 97, -3, 100, -1, 125, 28, 128, 32, -128, 31, -128, 28, -99, -7, -98, -8, -98, -7 )
+
+[node name="Spike39" type="Area2D" parent="Spikes"]
+position = Vector2( 1006, 1503 )
+script = ExtResource( 13 )
+
+[node name="Spike" type="Sprite" parent="Spikes/Spike39"]
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Spikes/Spike39"]
+position = Vector2( 0, 3 )
+polygon = PoolVector2Array( -72, 27, -47, -6, -46, -6, -24, 27, -2, -7, 0, -5, 1, -4, 23, 27, 44, -5, 46, -5, 72, 27, 96, -3, 97, -3, 100, -1, 125, 28, 128, 32, -128, 31, -128, 28, -99, -7, -98, -8, -98, -7 )
+
 [node name="Tiles" type="TileMap" parent="."]
 tile_set = SubResource( 11 )
 collision_layer = 3
@@ -733,6 +799,12 @@ max_distance = 20000.0
 [connection signal="body_entered" from="Spikes/Spike23" to="Spikes/Spike23" method="_on_Spike_body_entered"]
 [connection signal="body_entered" from="Spikes/Spike24" to="Spikes/Spike24" method="_on_Spike_body_entered"]
 [connection signal="body_entered" from="Spikes/Spike26" to="Spikes/Spike26" method="_on_Spike_body_entered"]
+[connection signal="body_entered" from="Spikes/Spike30" to="Spikes/Spike30" method="_on_Spike_body_entered"]
+[connection signal="body_entered" from="Spikes/Spike32" to="Spikes/Spike32" method="_on_Spike_body_entered"]
+[connection signal="body_entered" from="Spikes/Spike34" to="Spikes/Spike34" method="_on_Spike_body_entered"]
+[connection signal="body_entered" from="Spikes/Spike36" to="Spikes/Spike36" method="_on_Spike_body_entered"]
+[connection signal="body_entered" from="Spikes/Spike38" to="Spikes/Spike38" method="_on_Spike_body_entered"]
+[connection signal="body_entered" from="Spikes/Spike39" to="Spikes/Spike39" method="_on_Spike_body_entered"]
 [connection signal="pressed" from="CanvasLayer/Menu/Retry" to="CanvasLayer/Menu" method="_on_Retry_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menu/Quit" to="CanvasLayer/Menu" method="_on_Quit_pressed"]
 [connection signal="body_entered" from="Exit3" to="Exit3" method="_on_Exit3_body_entered"]

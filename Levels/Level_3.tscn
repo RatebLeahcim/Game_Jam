@@ -697,7 +697,7 @@ script = ExtResource( 12 )
 position = Vector2( 4, -15 )
 frames = SubResource( 16 )
 animation = "exit"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit4"]
