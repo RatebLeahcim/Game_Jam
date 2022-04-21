@@ -376,7 +376,5 @@ position = Vector2( 370, 299 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 32 )
 animation = "death"
-frame = 3
-playing = true
 
 [connection signal="pressed" from="Button/Next" to="Button" method="_on_Next_pressed"]
