@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/Players/Jump3.png" type="Texture" id=1]
 [ext_resource path="res://StateMachine/Player3/Coyote3.gd" type="Script" id=2]
@@ -9,15 +9,9 @@
 [ext_resource path="res://StateMachine/Player3/Falling3.gd" type="Script" id=7]
 [ext_resource path="res://StateMachine/Player3/Moving_and_Jumping3.gd" type="Script" id=8]
 [ext_resource path="res://Player/Player.gd" type="Script" id=9]
-[ext_resource path="res://Assets/Players/Death.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Players/Character.png" type="Texture" id=11]
 
 [sub_resource type="AtlasTexture" id=22]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=31]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 64, 64 )
@@ -42,16 +36,6 @@ flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 128, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=29]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 64, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=30]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 64, 64 )
-
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
 atlas = ExtResource( 1 )
@@ -62,25 +46,20 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=32]
+[sub_resource type="AtlasTexture" id=31]
 flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=33]
+[sub_resource type="AtlasTexture" id=29]
 flags = 4
-atlas = ExtResource( 10 )
-region = Rect2( 64, 0, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=34]
-flags = 4
-atlas = ExtResource( 10 )
+atlas = ExtResource( 1 )
 region = Rect2( 0, 64, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=35]
+[sub_resource type="AtlasTexture" id=30]
 flags = 4
-atlas = ExtResource( 10 )
-region = Rect2( 64, 64, 64, 64 )
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 64, 64 )
 
 [sub_resource type="SpriteFrames" id=15]
 animations = [ {
@@ -89,19 +68,9 @@ animations = [ {
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 31 ) ],
-"loop": false,
-"name": "WallJump",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
 "loop": true,
 "name": "Moving",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 29 ), SubResource( 30 ) ],
-"loop": false,
-"name": "Falling",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 27 ), SubResource( 28 ) ],
@@ -109,15 +78,20 @@ animations = [ {
 "name": "Jumping",
 "speed": 5.0
 }, {
+"frames": [ SubResource( 31 ) ],
+"loop": false,
+"name": "WallJump",
+"speed": 5.0
+}, {
 "frames": [  ],
 "loop": true,
 "name": "Attacking",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
-"loop": true,
-"name": "Death",
-"speed": 2.0
+"frames": [ SubResource( 29 ), SubResource( 30 ) ],
+"loop": false,
+"name": "Falling",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=16]
