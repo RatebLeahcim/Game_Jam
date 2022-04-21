@@ -311,7 +311,7 @@ collision_mask = 3
 format = 1
 
 [node name="Player_Container3" type="Node2D" parent="."]
-position = Vector2( -1825, -932 )
+position = Vector2( -1692, -964 )
 script = ExtResource( 6 )
 
 [node name="Camera" type="Camera2D" parent="Player_Container3"]
@@ -381,12 +381,13 @@ __meta__ = {
 }
 
 [node name="Exit5" type="Area2D" parent="."]
-position = Vector2( 965, -527 )
+position = Vector2( 939, -552 )
 script = ExtResource( 11 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Exit5"]
 frames = SubResource( 16 )
 animation = "exit"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit5"]
