@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var Player = load("res://Player/Player3.tscn")
+onready var Player = load("res://Player/Player1.tscn")
 var starting_position = Vector2(-1790,-1024)
 func _ready():
 	pass
