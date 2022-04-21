@@ -6,16 +6,17 @@ We interpreted the Theme "Time Crunch" to represent the issues Game industry reg
 
 ## Game Play
 Finish your Game by the Deadline (Timer) by surviving three different platforming maps. Avoid enemies and spike traps!<br />
- Level 1 - Move left with A, Move right with D, Crouch with S, Jump with W, Double-Jump by Pressing W twice. You can wall climb on this level.<br /><br />
+ Level 1 - Move left with A, Move right with D, Crouch with S, Jump with W, Double-Jump by Pressing W twice. You can wall climb on this level.<br />
  Level 2 - Move left with A, Move right with D, Crouch with S, Jump with W, Double-Jump by Pressing W twice. However, you can no longer wall climb.<br />
  Level 3 - Move left with A, Move right with D, Crouch with S, Jump with W. However, you can no longer Double Jump and Wall Climb.<br />
 
 ## Impediments
-The night before the due date we had accidentally pushed the origin to Main while implementing changes corrupting the Github repository. This was fixed after a few hours of rewriting the game. The Art and Sound were a big task to create all original works for, however we spent an entire day working on both as the Game's skeleton was being set up. The Music was based on the Royalty Free works of classical musicians, with the sound effects all being various folley from open resource websites. We had to go with pixel art only in terms of the visual design of our game as it was the only way to create all original assets in the 48 hour time limit. We did have some issues as well with fitting our original map concepts into Godot so we had to simplify them within the program. 
+The night before the due date we had accidentally pushed the origin to Main while implementing changes corrupting the Github repository. This was fixed after a few hours of rewriting the game. The Art and Sound were a big task to create all original works for, however we spent an entire day working on both as the Game's skeleton was being set up. The Music was based on the Royalty Free works of classical musicians, with the sound effects all being various folley from open resource websites. We had to go with pixel art only in terms of the visual design of our game as it was the only way to create all original assets in the 48 hour time limit. We did have some issues as well with fitting our original map concepts into Godot so we had to simplify them within the program.
+<br />
+For the sound effects for character animation such as walking, jumping and wall climbing, it kept looping the background when being played. Therefore our group made a decision to not add them into the game.
 
 ## Implementation
 Built using Godot 3.2.3
-
 Features:<br />
 Original Sprites and Art.<br />
 Original Soundtrack Inspired by Mozart and Beethoven. <br />
@@ -24,7 +25,6 @@ Wall Climbing (Level 1.)<br />
 An Interpretive Story.<br />
 Spikes and Moving Enemies.<br />
 Walls and Floors that Players need to transverse to finish the Game.<br />
-A Timer to Time the Levels.<br />
 Sound Effects for Player Actions.<br />
 Title Screen and Ending Screens.<br />
 Reset Levels.<br />
