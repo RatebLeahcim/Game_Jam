@@ -23,6 +23,7 @@ func physics_process(_delta):
 	if Input.is_action_pressed("jump") and not player.double_jumped and SM.previous_state.name != "WallJump":
 		player.double_jumped = true
 		SM.set_state("Jumping")
+		
 	SM.get_node("WallJump").check_walljump()
 		
 	player.velocity += player.move_speed * player.move_vector() + player.gravity

@@ -22,6 +22,7 @@ var is_jumping = false
 var double_jumped = false
 var should_direction_flip = true # wether or not player controls (left/right) can flip the player sprite
 
+
 func _physics_process(_delta):
 	velocity.x = clamp(velocity.x,-max_move,max_move)
 		
