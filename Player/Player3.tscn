@@ -42,11 +42,6 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=31]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 64, 64 )
-
 [sub_resource type="AtlasTexture" id=22]
 flags = 4
 atlas = ExtResource( 1 )
@@ -82,6 +77,11 @@ flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 128, 0, 64, 64 )
 
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 64, 64 )
+
 [sub_resource type="SpriteFrames" id=15]
 animations = [ {
 "frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
@@ -92,16 +92,6 @@ animations = [ {
 "frames": [ SubResource( 29 ), SubResource( 30 ) ],
 "loop": false,
 "name": "Falling",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "Attacking",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 31 ) ],
-"loop": false,
-"name": "WallJump",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 22 ) ],
@@ -117,6 +107,16 @@ animations = [ {
 "frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
 "loop": true,
 "name": "Moving",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Attacking",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 31 ) ],
+"loop": false,
+"name": "WallJump",
 "speed": 5.0
 } ]
 
