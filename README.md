@@ -49,7 +49,7 @@ Programming and Coding: Edison Li
 <br />
 Sound Design and Music: Michael Betar
 <br />
-Game Narrative - Kathryn Steele
+Game Narrative - Michael Betar and Kathryn Steele
 <br />
 Godot Implementer - Edison Li
 <br />
